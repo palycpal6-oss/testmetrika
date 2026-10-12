@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование СБИС</title>
+
+    <!-- Подключение скрипта СБИС -->
+    <script>
+        (function() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://test.sbis.link/cst/get_script';
+
+            script.onload = function() {
+                if (window.cnsmrSbis instanceof Function) {
+                    window.cnsmrSbis(
+                        'bea20c8b-629d-4caf-b991-5ea6168c6b86'
+                    );
+                }
+            };
+
+            document.head.appendChild(script);
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>Тестирование подключения СБИС</h1>
+    <p>Тестовый сайт для проверки работы скрипта.</p>
+</body>
+</html>
